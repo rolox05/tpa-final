@@ -1,10 +1,12 @@
 package tpaPrueba.serv;
 
 import tpaPrueba.ent.Autor;
+import tpaPrueba.ent.Persona;
 import tpaPrueba.repos.AutorRepository;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
+import java.util.Optional;
 
 @Singleton
 public class AutorService {
@@ -14,6 +16,10 @@ public class AutorService {
 
     public Iterable<Autor> getAll(){
         return autorRepository.findAll();
+    }
+
+    public Optional<Autor> findOne(Long id){
+        return autorRepository.findById(id);
     }
 
     public Autor saveOrUpdate(Autor entity){

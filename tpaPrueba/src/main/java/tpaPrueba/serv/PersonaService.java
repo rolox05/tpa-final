@@ -5,6 +5,7 @@ import tpaPrueba.repos.PersonaRepository;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
+import java.util.Optional;
 
 @Singleton
 public class PersonaService {
@@ -14,6 +15,10 @@ public class PersonaService {
 
     public Iterable<Persona> getAll(){
         return personaRepository.findAll();
+    }
+
+    public Optional<Persona> findOne(Long id){
+        return personaRepository.findById(id);
     }
 
     public Iterable<Persona> getByNombreOrApellido(String nombre, String apellido){

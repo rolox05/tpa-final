@@ -1,5 +1,6 @@
 package tpaPrueba.control;
 
+import io.micronaut.context.annotation.Parameter;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
@@ -16,7 +17,6 @@ public class AutorController {
 
     @Get
     public HttpResponse<?> findAll(){
-
         try {
             return HttpResponse.status(HttpStatus.OK).body(autorService.getAll());
         }catch (Exception ex) {
@@ -24,6 +24,14 @@ public class AutorController {
         }
     }
 
+    @Get("/{id}")
+    public HttpResponse<?> findOne(@Parameter Long id){
+        try {
+            return HttpResponse.status(HttpStatus.OK).body(autorService.findOne(id));
+        }catch (Exception ex) {
+            return HttpResponse.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Error Por favor intente mas tarde.\"}");
+        }
+    }
 
     @Post("/saveAutor")
     public HttpResponse<?> saveOrUpdate(@Body Autor entity) {

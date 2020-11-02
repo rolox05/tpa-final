@@ -1,5 +1,6 @@
 package tpaPrueba.control;
 
+import io.micronaut.context.annotation.Parameter;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
@@ -16,7 +17,6 @@ public class PersonaController {
 
     @Get
     public HttpResponse<?> findAll(){
-
         try {
             return HttpResponse.status(HttpStatus.OK).body(personaService.getAll());
         }catch (Exception ex) {
@@ -24,9 +24,17 @@ public class PersonaController {
         }
     }
 
+    @Get("/{id}")
+    public HttpResponse<?> findOne(@Parameter Long id){
+        try {
+            return HttpResponse.status(HttpStatus.OK).body(personaService.findOne(id));
+        }catch (Exception ex) {
+            return HttpResponse.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Error Por favor intente mas tarde.\"}");
+        }
+    }
 
-    @Get("/{filtro}")
-    public HttpResponse<?> findPersonaByNombreOrApellido(String filtro){
+    @Get("/search")
+    public HttpResponse<?> findPersonaByNombreOrApellido(@QueryValue String filtro){
         try{
              return HttpResponse.status(HttpStatus.OK).body(personaService.getByNombreOrApellido(filtro,filtro));
     }catch (Exception ex){

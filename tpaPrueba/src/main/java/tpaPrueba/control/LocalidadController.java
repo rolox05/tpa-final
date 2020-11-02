@@ -1,5 +1,6 @@
 package tpaPrueba.control;
 
+import io.micronaut.context.annotation.Parameter;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
@@ -18,7 +19,6 @@ public class LocalidadController {
 
     @Get
     public HttpResponse<?> findAll(){
-
         try {
             return HttpResponse.status(HttpStatus.OK).body(localidadService.getAll());
         }catch (Exception ex) {
@@ -26,6 +26,14 @@ public class LocalidadController {
         }
     }
 
+    @Get("/{id}")
+    public HttpResponse<?> findOne(@Parameter Long id){
+        try {
+            return HttpResponse.status(HttpStatus.OK).body(localidadService.findOne(id));
+        }catch (Exception ex) {
+            return HttpResponse.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Error Por favor intente mas tarde.\"}");
+        }
+    }
 
     @Post("/saveLocalidad")
     public HttpResponse<?> saveOrUpdate(@Body Localidad entity) {
