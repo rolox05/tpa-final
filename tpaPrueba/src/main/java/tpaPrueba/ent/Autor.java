@@ -28,6 +28,14 @@ public class Autor{
     @Column(name = "biografia", length = 1500)
     private String biografia;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getNombre() {
         return nombre;
     }

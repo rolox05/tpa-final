@@ -28,6 +28,14 @@ public class Domicilio{
     @JoinColumn(name = "fk_localidad")
     private Localidad localidad;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getCalle() {
         return calle;
     }
