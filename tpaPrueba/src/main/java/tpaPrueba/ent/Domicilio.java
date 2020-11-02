@@ -1,16 +1,12 @@
 package tpaPrueba.ent;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Domicilio")
-@Getter
-@Setter
+@Table(name = "domicilio")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Domicilio{
@@ -32,7 +28,27 @@ public class Domicilio{
     @JoinColumn(name = "fk_localidad")
     private Localidad localidad;
 
+    public String getCalle() {
+        return calle;
+    }
 
+    public void setCalle(String calle) {
+        this.calle = calle;
+    }
 
+    public int getNumero() {
+        return numero;
+    }
 
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public Localidad getLocalidad() {
+        return localidad;
+    }
+
+    public void setLocalidad(Localidad localidad) {
+        this.localidad = localidad;
+    }
 }

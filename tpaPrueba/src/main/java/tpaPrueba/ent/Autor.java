@@ -2,16 +2,12 @@ package tpaPrueba.ent;
 
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "autor")
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Autor{
@@ -32,4 +28,27 @@ public class Autor{
     @Column(name = "biografia", length = 1500)
     private String biografia;
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getBiografia() {
+        return biografia;
+    }
+
+    public void setBiografia(String biografia) {
+        this.biografia = biografia;
+    }
 }
