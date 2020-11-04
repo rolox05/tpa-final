@@ -1,5 +1,6 @@
 package tpaPrueba.ent;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -39,7 +40,7 @@ public class Persona{
             joinColumns = @JoinColumn(name = "persona_id"),
             inverseJoinColumns = @JoinColumn(name = "libro_id")
     )
-    private List<Libro> libros = new ArrayList<Libro>();
+    @JsonIgnore private List<Libro> libros = new ArrayList<Libro>();
 
     public Long getId() {
         return id;
