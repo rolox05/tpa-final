@@ -81,12 +81,12 @@ public class Persona{
     public void setDomicilio(Domicilio domicilio) {
         this.domicilio = domicilio;
     }
-
+/*
     public List<Libro> getLibros() {
         return libros;
     }
 
     public void setLibros(List<Libro> libros) {
         this.libros = libros;
-    }
+ }*/
 }

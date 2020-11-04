@@ -9,7 +9,7 @@ import tpaPrueba.serv.LibroService;
 
 import javax.inject.Inject;
 
-@Controller("/api/v1/libros")
+@Controller("api/v1/libros")
 public class LibroController {
 
     @Inject
