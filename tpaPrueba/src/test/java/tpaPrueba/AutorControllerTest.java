@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class AutorControllerTest {
 
     @Inject
-    @Client("/api/v1/localidades")
+    @Client("/api/v1/autores")
     RxHttpClient client;
 
     @Test
