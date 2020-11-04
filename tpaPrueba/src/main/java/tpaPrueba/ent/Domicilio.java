@@ -24,7 +24,7 @@ public class Domicilio{
     @Column(name = "numero")
     private int numero;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(cascade = CascadeType.ALL,optional = false)
     @JoinColumn(name = "fk_localidad")
     private Localidad localidad;
 
