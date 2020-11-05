@@ -1,12 +1,12 @@
 package tpaPrueba.serv;
 
-import tpaPrueba.ent.Autor;
-import tpaPrueba.ent.Persona;
-import tpaPrueba.repos.AutorRepository;
+import java.util.Optional;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
-import java.util.Optional;
+
+import tpaPrueba.ent.Autor;
+import tpaPrueba.repos.AutorRepository;
 
 @Singleton
 public class AutorService {
