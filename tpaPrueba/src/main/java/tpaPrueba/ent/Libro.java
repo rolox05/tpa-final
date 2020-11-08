@@ -1,9 +1,17 @@
 package tpaPrueba.ent;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Builder.Default;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,14 +19,10 @@ import java.util.List;
 @Table(name = "libro")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Libro{
-
-    private static final long serialVersionUID = 1L;
-
-    @Id
-    @Column(name="id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id ;
+@Builder
+@Setter
+@Getter
+public class Libro extends Base{
 
     @Column(name = "titulo")
     private String titulo;
@@ -33,53 +37,7 @@ public class Libro{
     private int fecha;
 
     @ManyToMany(cascade = CascadeType.REFRESH)
+    @Default
     private List<Autor> autores = new ArrayList<Autor>();
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    public int getPaginas() {
-        return paginas;
-    }
-
-    public void setPaginas(int paginas) {
-        this.paginas = paginas;
-    }
-
-    public int getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(int fecha) {
-        this.fecha = fecha;
-    }
-
-    public List<Autor> getAutores() {
-        return autores;
-    }
-
-    public void setAutores(List<Autor> autores) {
-        this.autores = autores;
-    }
 }

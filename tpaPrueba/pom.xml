@@ -114,6 +114,7 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.18.12</version>
+      <scope>compile</scope>
     </dependency>
 
   </dependencies>
@@ -139,6 +140,11 @@
           <!-- Uncomment to enable incremental compilation -->
           <!-- <useIncrementalCompilation>false</useIncrementalCompilation> -->
           <annotationProcessorPaths>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+              <version>1.18.0</version>
+            </path>
             <path>
               <groupId>io.micronaut</groupId>
               <artifactId>micronaut-inject-java</artifactId>
@@ -169,6 +175,11 @@
             <configuration>
               <annotationProcessorPaths>
                 <path>
+                  <groupId>org.projectlombok</groupId>
+                  <artifactId>lombok</artifactId>
+                  <version>1.18.0</version>
+                </path>
+                <path>
                   <groupId>io.micronaut</groupId>
                   <artifactId>micronaut-inject-java</artifactId>
                   <version>${micronaut.version}</version>
@@ -190,6 +201,5 @@
       </plugin>
     </plugins>
   </build>
-
 
 </project>
