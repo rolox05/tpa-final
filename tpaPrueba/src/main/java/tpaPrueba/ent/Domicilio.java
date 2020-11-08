@@ -6,14 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "domicilio")
@@ -22,14 +15,7 @@ import javax.persistence.Table;
 @Builder
 @Setter
 @Getter
-public class Domicilio{
-
-    private static final long serialVersionUID = 1L;
-
-    @Id
-    @Column(name="id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id ;
+public class Domicilio extends Base{
 
     @Column(name = "calle")
     private String calle;
@@ -37,7 +23,7 @@ public class Domicilio{
     @Column(name = "numero")
     private int numero;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(cascade = CascadeType.REFRESH,optional = false)
     @JoinColumn(name = "fk_localidad")
     private Localidad localidad;
 
