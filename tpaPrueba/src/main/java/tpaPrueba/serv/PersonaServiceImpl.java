@@ -13,4 +13,8 @@ public class PersonaServiceImpl extends BaseServiceImpl<Persona, Long> implement
     public PersonaServiceImpl(PersonaRepository baseRepository) {
         super(baseRepository);
     }
+
+    public Iterable<Persona> getByNombreOrApellido(String nombre, String apellido){
+        return ((PersonaRepository) baseRepository).findByNombreContainsOrApellidoContains(nombre, apellido);
+    }
 }
