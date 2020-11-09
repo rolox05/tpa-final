@@ -1,17 +1,18 @@
 package tpaPrueba;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import javax.inject.Inject;
+
+import org.junit.jupiter.api.Test;
+
 import io.micronaut.http.HttpRequest;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.client.RxHttpClient;
 import io.micronaut.http.client.annotation.Client;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import io.reactivex.Flowable;
-import org.junit.jupiter.api.Test;
 import tpaPrueba.ent.Persona;
-
-import javax.inject.Inject;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @MicronautTest
 public class PersonaControllerTest {
@@ -27,7 +28,7 @@ public class PersonaControllerTest {
         testSave.setApellido("Apellido");
         testSave.setDni(123456789);
 
-        Flowable<HttpResponse<Persona>> result = client.exchange(HttpRequest.POST("/savePersona", testSave), Persona.class);
+        Flowable<HttpResponse<Persona>> result = client.exchange(HttpRequest.POST("/save", testSave), Persona.class);
 
         Persona pers = result.blockingFirst().getBody().get();
 

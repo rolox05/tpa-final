@@ -53,6 +53,7 @@ public abstract class BaseControllerImpl<E extends Base, S extends BaseServiceIm
             return HttpResponse.status(HttpStatus.BAD_REQUEST).body("{\"error\":\"Error. Por favor intente mas tarde.\"}");
         }
     }
+
     @Override
     @Put("/{id}")
     public HttpResponse<?> update(@PathVariable Long id, @Body E entity) {
@@ -72,5 +73,5 @@ public abstract class BaseControllerImpl<E extends Base, S extends BaseServiceIm
             return HttpResponse.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Error Por favor intente mas tarde.\"}");
         }
     }
-
 }
+

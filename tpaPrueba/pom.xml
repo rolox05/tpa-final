@@ -13,8 +13,8 @@
   </parent>
 
   <properties>
-    <jdk.version>14</jdk.version>
-    <release.version>14</release.version>
+    <jdk.version>13</jdk.version>
+    <release.version>13</release.version>
     <micronaut.version>2.1.2</micronaut.version>
     <micronaut.data.version>2.1.0</micronaut.data.version>
     <exec.mainClass>tpaPrueba.Application</exec.mainClass>
@@ -116,6 +116,15 @@
       <version>1.18.12</version>
       <scope>compile</scope>
     </dependency>
+
+
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
+
 
   </dependencies>
 
