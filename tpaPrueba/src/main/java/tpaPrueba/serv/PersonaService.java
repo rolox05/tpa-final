@@ -1,11 +1,12 @@
 package tpaPrueba.serv;
 
-import tpaPrueba.ent.Persona;
-import tpaPrueba.repos.PersonaRepository;
+import java.util.Optional;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
-import java.util.Optional;
+
+import tpaPrueba.ent.Persona;
+import tpaPrueba.repos.PersonaRepository;
 
 @Singleton
 public class PersonaService {

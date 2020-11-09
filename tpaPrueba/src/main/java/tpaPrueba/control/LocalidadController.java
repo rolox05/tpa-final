@@ -1,58 +1,60 @@
 package tpaPrueba.control;
 
-import io.micronaut.context.annotation.Parameter;
+import io.micronaut.data.model.Pageable;
 import io.micronaut.http.HttpResponse;
-import io.micronaut.http.HttpStatus;
-import io.micronaut.http.annotation.*;
+import io.micronaut.http.annotation.Body;
+import io.micronaut.http.annotation.Controller;
+import io.micronaut.http.annotation.Delete;
+import io.micronaut.http.annotation.Get;
+import io.micronaut.http.annotation.PathVariable;
+import io.micronaut.http.annotation.Post;
+import io.micronaut.http.annotation.Put;
 import tpaPrueba.ent.Localidad;
-import tpaPrueba.ent.Persona;
-import tpaPrueba.serv.LocalidadService;
-import tpaPrueba.serv.PersonaService;
-
-import javax.inject.Inject;
+import tpaPrueba.serv.LocalidadServiceImpl;
 
 @Controller("api/v1/localidades")
-public class LocalidadController {
+public class LocalidadController extends BaseControllerImpl<Localidad, LocalidadServiceImpl> {
 
-    @Inject
-    private LocalidadService localidadService;
+	@Override
+	@Get("/")
+	public HttpResponse<?> getAll() {
+		// TODO Auto-generated method stub
+		return super.getAll();
+	}
 
-    @Get
-    public HttpResponse<?> findAll(){
-        try {
-            return HttpResponse.status(HttpStatus.OK).body(localidadService.getAll());
-        }catch (Exception ex) {
-            return HttpResponse.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Error Por favor intente mas tarde.\"}");
-        }
-    }
+	@Get("/paged")
+	@Override
+	public HttpResponse<?> getAll(@Body Pageable pageable) {
+		// TODO Auto-generated method stub
+		return super.getAll(pageable);
+	}
 
-    @Get("/{id}")
-    public HttpResponse<?> findOne(@Parameter Long id){
-        try {
-            return HttpResponse.status(HttpStatus.OK).body(localidadService.findOne(id));
-        }catch (Exception ex) {
-            return HttpResponse.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Error Por favor intente mas tarde.\"}");
-        }
-    }
+	@Get("/{id}")
+	@Override
+	public HttpResponse<?> getOne(Long id) {
+		// TODO Auto-generated method stub
+		return super.getOne(id);
+	}
 
-    @Post("/saveLocalidad")
-    public HttpResponse<?> saveOrUpdate(@Body Localidad entity) {
-        try{
-            return HttpResponse.status(HttpStatus.OK).body(localidadService.saveOrUpdate(entity));
-        }catch (Exception ex){
-            return HttpResponse.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Error Por favor intente mas tarde.\"}");
-        }
+	@Override
+	@Post("/")
+	public HttpResponse<?> save(@Body Localidad entity) {
+		// TODO Auto-generated method stub
+		return super.save(entity);
+	}
 
+	@Override
+	@Put("/{id}")
+	public HttpResponse<?> update(@PathVariable Long id, Localidad entity) {
+		// TODO Auto-generated method stub
+		return super.update(id, entity);
+	}
 
-    }
+	@Override
+	@Delete("/{id}")
+	public HttpResponse<?> delete(@PathVariable Long id) {
+		// TODO Auto-generated method stub
+		return super.delete(id);
+	}
 
-    @Delete("delete/{id}")
-    public HttpResponse<?> delete(Long id) {
-        try {
-            localidadService.deleteLocalidad(id);
-            return HttpResponse.status(HttpStatus.OK);
-        }catch (Exception ex){
-            return HttpResponse.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Error Por favor intente mas tarde.\"}");
-        }
-    }
 }
