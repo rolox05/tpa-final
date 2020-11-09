@@ -5,23 +5,25 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
+import lombok.Setter;
 
-@SuperBuilder
-@Data
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+import javax.persistence.Table;
+
 @Entity
 @Table(name = "localidad")
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
+@Setter
+@Getter
 public class Localidad extends Base{
-
-    private static final long serialVersionUID = 1L;
-
-
 
     @Column(name = "denominacion")
     private String denominacion;
-
 }

@@ -1,5 +1,17 @@
 package tpaPrueba.ent;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+//import io.micronaut.data.annotation.Id;
+//import io.micronaut.data.annotation.GeneratedValue;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -13,19 +25,17 @@ import lombok.Getter;
 import lombok.experimental.SuperBuilder;
 
 @MappedSuperclass
-@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
 @Getter
-@SuperBuilder
-public class Base  implements Serializable {
+public class Base implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    public Base() {
-		super();
-	}
-
-	@Id
+    @Id
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id ;
+    protected Long id ;
+
 }

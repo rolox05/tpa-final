@@ -1,17 +1,17 @@
 package tpaPrueba.serv;
 
+import io.micronaut.core.annotation.Introspected;
+import tpaPrueba.ent.Localidad;
+import tpaPrueba.repos.LocalidadRepository;
 
 import javax.inject.Singleton;
 
-import io.micronaut.core.annotation.Introspected;
-import tpaPrueba.ent.Localidad;
-import tpaPrueba.repos.BaseRepository;
-
-@Singleton() 
+@Singleton
 @Introspected
-public class LocalidadServiceImpl extends BaseServiseImpl<Localidad, Long> implements LocalidadService {
+public class LocalidadServiceImpl extends BaseServiceImpl<Localidad, Long> implements LocalidadService {
 
-    public LocalidadServiceImpl(BaseRepository<Localidad, Long> baseRepository) {
+    public LocalidadServiceImpl(LocalidadRepository baseRepository) {
         super(baseRepository);
     }
+
 }

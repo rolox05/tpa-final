@@ -26,7 +26,7 @@ public class LocalidadControllerTest {
         Localidad testSave = new Localidad();
         testSave.setDenominacion("Rodriguez 200");
 
-        Flowable<HttpResponse<Localidad>> result = client.exchange(HttpRequest.POST("/saveLocalidad", testSave), Localidad.class);
+        Flowable<HttpResponse<Localidad>> result = client.exchange(HttpRequest.POST("/save", testSave), Localidad.class);
 
         Localidad loc = result.blockingFirst().getBody().get();
 

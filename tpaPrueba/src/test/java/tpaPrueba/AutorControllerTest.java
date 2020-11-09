@@ -28,7 +28,7 @@ public class AutorControllerTest {
         testSave.setApellido("Pan");
         testSave.setBiografia("Peter Pan es un eterno nino que vive en el pais de Nunca Jamas y desde alli nos cuenta maravillosas historias.");
 
-        Flowable<HttpResponse<Autor>> result = client.exchange(HttpRequest.POST("/saveAutor", testSave), Autor.class);
+        Flowable<HttpResponse<Autor>> result = client.exchange(HttpRequest.POST("/save", testSave), Autor.class);
 
         Autor autor = result.blockingFirst().getBody().get();
 

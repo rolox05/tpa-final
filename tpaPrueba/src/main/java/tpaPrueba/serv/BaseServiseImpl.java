@@ -22,22 +22,11 @@ public abstract class BaseServiseImpl<E extends Base, ID extends Serializable> i
         this.baseRepository=baseRepository;
     }
 
-    @Transactional
-    public Page<E> findall(Pageable pageable) throws Exception{
-        try{
-            Page<E> entities = baseRepository.findAll(pageable);
-            return entities;
-        }catch(Exception e){
-            throw new Exception(e.getMessage());
-        }
-
-    }
-
     @Override
     @Transactional
     public List<E> findall() throws Exception {
         try{
-            List<E> entities = baseRepository.findAll();
+            List<E> entities = (List<E>) baseRepository.findAll();
             return entities;
         }catch(Exception e){
             throw new Exception(e.getMessage());

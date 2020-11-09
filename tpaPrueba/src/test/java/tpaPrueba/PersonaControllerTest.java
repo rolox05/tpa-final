@@ -28,7 +28,7 @@ public class PersonaControllerTest {
         testSave.setApellido("Apellido");
         testSave.setDni(123456789);
 
-        Flowable<HttpResponse<Persona>> result = client.exchange(HttpRequest.POST("/savePersona", testSave), Persona.class);
+        Flowable<HttpResponse<Persona>> result = client.exchange(HttpRequest.POST("/save", testSave), Persona.class);
 
         Persona pers = result.blockingFirst().getBody().get();
 
