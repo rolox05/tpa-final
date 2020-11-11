@@ -1,8 +1,25 @@
 micronaut:
+  router:
+    static-resources:
+      swagger:
+        paths: classpath:META-INF/swagger
+        mapping: /api-docs/swagger/**
   application:
     name: tpaPrueba
+    api:
+      swagger:
+        path: /api-docs/swagger
+        version: 3.19.4
+        layout: StandaloneLayout
+        deepLinking: true
+        urls:
+          - name: api-persona
+            url: /api-docs/swagger/api-persona-tpa-2020-0.0.yml
+
   server:
     port: 9000
+
+
 ---
 application:
   port: 9000
