@@ -16,7 +16,7 @@
     <jdk.version>13</jdk.version>
     <release.version>13</release.version>
     <micronaut.version>2.1.2</micronaut.version>
-    <swagger.version>2.0.3</swagger.version>
+    <micronaut.openapi.version>2.1.1</micronaut.openapi.version>
     <micronaut.data.version>2.1.0</micronaut.data.version>
     <exec.mainClass>tpaPrueba.Application</exec.mainClass>
   </properties>
@@ -128,7 +128,6 @@
     <dependency>
       <groupId>io.swagger.core.v3</groupId>
       <artifactId>swagger-annotations</artifactId>
-      <version>${swagger.version}</version>
       <scope>compile</scope>
     </dependency>
 
@@ -171,11 +170,6 @@
               <artifactId>lombok</artifactId>
               <version>1.18.0</version>
             </path>
-            <path>
-              <groupId>io.micronaut.configuration</groupId>
-              <artifactId>micronaut-openapi</artifactId>
-              <version>${micronaut.version}</version>
-            </path>
 
             <path>
               <groupId>io.micronaut</groupId>
@@ -191,6 +185,11 @@
               <groupId>io.micronaut.data</groupId>
               <artifactId>micronaut-data-processor</artifactId>
               <version>${micronaut.data.version}</version>
+            </path>
+            <path>
+              <groupId>io.micronaut.openapi</groupId>
+              <artifactId>micronaut-openapi</artifactId>
+              <version>${micronaut.openapi.version}</version>
             </path>
           </annotationProcessorPaths>
           <compilerArgs>
