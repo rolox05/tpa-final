@@ -72,6 +72,12 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
+      <groupId>io.swagger.core.v3</groupId>
+      <artifactId>swagger-annotations</artifactId>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
       <groupId>io.micronaut.sql</groupId>
       <artifactId>micronaut-jdbc-hikari</artifactId>
       <scope>compile</scope>
@@ -126,11 +132,10 @@
     </dependency>
 
     <dependency>
-      <groupId>io.swagger.core.v3</groupId>
-      <artifactId>swagger-annotations</artifactId>
-      <scope>compile</scope>
+      <groupId>io.micronaut.configuration</groupId>
+      <artifactId>micronaut-openapi</artifactId>
+      <version>1.5.3</version>
     </dependency>
-
   </dependencies>
 
   <build>
@@ -141,6 +146,8 @@
         <configuration>
           <fork>true</fork>
           <compilerArgs>
+            <arg>-Amicronaut.processing.group=tpaFinal</arg>
+            <arg>-Amicronaut.processing.module=tpa-final</arg>
             <arg>-J-Dmicronaut.openapi.views.spec=rapidoc.enabled=true,swagger-ui.enabled=true,swagger-ui.theme=flattop</arg>
           </compilerArgs>
         </configuration>
