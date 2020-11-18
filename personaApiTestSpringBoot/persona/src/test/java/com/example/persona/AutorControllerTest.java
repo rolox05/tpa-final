@@ -30,7 +30,7 @@ public class AutorControllerTest {
 	@Test
 	// Define a JUnit que es el método que se puede ejecutar como un caso de prueba.
 	public void contextLoads() {
-
+		// La siguiente prueba comprueba que la instancia del controlador que se crea e inyecta con éxito
 		Assertions.assertThat(autorController).isNotNull();
 	}
 
