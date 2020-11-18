@@ -13,8 +13,8 @@
   </parent>
 
   <properties>
-    <jdk.version>13</jdk.version>
-    <release.version>13</release.version>
+    <jdk.version>14.0.2</jdk.version>
+    <release.version>14.0.2</release.version>
     <micronaut.version>2.1.2</micronaut.version>
     <micronaut.data.version>2.1.0</micronaut.data.version>
     <exec.mainClass>tpaPrueba.Application</exec.mainClass>
@@ -40,6 +40,17 @@
 
 
   <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+      <version>2.2.6.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>io.micronaut</groupId>
       <artifactId>micronaut-inject</artifactId>
