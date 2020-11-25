@@ -44,7 +44,7 @@ public class AutorControllerTest {
 	@Test
 	public void whenAutorControllerGetOneThenShouldReturnResponseEntityNOTFOUND() {
 
-		final ResponseEntity<Autor> autors = (ResponseEntity<Autor>) autorController.getOne(12L);
+		final ResponseEntity<Autor> autors = (ResponseEntity<Autor>) autorController.getOne(18L);
 		assertEquals(autors.getStatusCode(), HttpStatus.NOT_FOUND);
 	}
 

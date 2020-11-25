@@ -2,10 +2,10 @@ micronaut:
   application:
     name: tpaPrueba
   server:
-    port: 9000
+    port: 3005
 ---
 application:
-  port: 9000
+  port: 3005
   #end::application[]
   #tag::datasource[]
 ---
