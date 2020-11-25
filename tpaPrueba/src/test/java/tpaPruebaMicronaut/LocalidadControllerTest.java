@@ -1,4 +1,4 @@
-package tpaPrueba;
+package tpaPruebaMicronaut;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

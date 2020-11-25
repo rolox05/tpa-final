@@ -1,0 +1,186 @@
+[33mcommit fbcbbe97267e1a9b30d72cedbde546f93dbe537c[m[33m ([m[1;36mHEAD -> [m[1;32mTestSpringBoot[m[33m)[m
+Author: Anto <antocanessa.0694@gmail.com>
+Date:   Wed Nov 18 20:11:15 2020 -0300
+
+    AutorServiceTest con mocks
+
+[33mcommit 73a9f50ea2ccfdb0909708bd2334cd8691ceeee8[m
+Author: Anto <antocanessa.0694@gmail.com>
+Date:   Wed Nov 18 18:43:34 2020 -0300
+
+    Api persona para test en Spring Boot
+
+[33mcommit fe7939b4d18ae40a36fd9563c004911c84bf5db7[m[33m ([m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mdevelop[m[33m)[m
+Merge: 6c970c2 10dc76a
+Author: Rodrigo Sobisch <rolox05@gmail.com>
+Date:   Mon Nov 9 20:57:05 2020 -0300
+
+    Merge pull request #2 from rolox05/generico
+    
+    Generico
+
+[33mcommit 10dc76a90c95bda459e51539366394ba12f42ca7[m[33m ([m[1;31morigin/generico[m[33m)[m
+Merge: 9ff0674 6c970c2
+Author: Rodrigo Sobisch <rolox05@gmail.com>
+Date:   Mon Nov 9 20:56:33 2020 -0300
+
+    Merge remote-tracking branch 'origin/develop' into generico
+    
+    # Conflicts:
+    #       tpaPrueba/src/main/java/tpaPrueba/control/AutorController.java
+    #       tpaPrueba/src/main/java/tpaPrueba/control/BaseController.java
+    #       tpaPrueba/src/main/java/tpaPrueba/control/BaseControllerImpl.java
+    #       tpaPrueba/src/main/java/tpaPrueba/control/LibroController.java
+    #       tpaPrueba/src/main/java/tpaPrueba/control/LocalidadController.java
+    #       tpaPrueba/src/main/java/tpaPrueba/control/PersonaController.java
+    #       tpaPrueba/src/main/java/tpaPrueba/ent/Autor.java
+    #       tpaPrueba/src/main/java/tpaPrueba/ent/Base.java
+    #       tpaPrueba/src/main/java/tpaPrueba/ent/Libro.java
+    #       tpaPrueba/src/main/java/tpaPrueba/ent/Localidad.java
+    #       tpaPrueba/src/main/java/tpaPrueba/ent/Persona.java
+    #       tpaPrueba/src/main/java/tpaPrueba/repos/BaseRepository.java
+    #       tpaPrueba/src/main/java/tpaPrueba/repos/LocalidadRepository.java
+    #       tpaPrueba/src/main/java/tpaPrueba/serv/AutorService.java
+    #       tpaPrueba/src/main/java/tpaPrueba/serv/LibroService.java
+    #       tpaPrueba/src/main/java/tpaPrueba/serv/LocalidadService.java
+    #       tpaPrueba/src/main/java/tpaPrueba/serv/LocalidadServiceImpl.java
+    #       tpaPrueba/src/main/java/tpaPrueba/serv/PersonaService.java
+
+[33mcommit 6c970c29c640992d6cbfd60099e692b9bc32248f[m
+Merge: 3a1ca03 a2a37f7
+Author: Rodrigo Sobisch <rolox05@gmail.com>
+Date:   Mon Nov 9 20:42:36 2020 -0300
+
+    Merge pull request #1 from rolox05/tpa
+    
+    micronaout & Generics
+
+[33mcommit 9ff0674a23e347734a9097ee00c8260b0761d9ee[m
+Author: Rodrigo <rodrigogcespedes@gmail.com>
+Date:   Sun Nov 8 19:12:19 2020 -0300
+
+    Puesta al dia con develop
+
+[33mcommit ded2aca9a5e8f90f5fc096d41ec1433fcf053c3d[m
+Author: Rodrigo <rodrigogcespedes@gmail.com>
+Date:   Sun Nov 8 18:27:17 2020 -0300
+
+    Tests agragados
+
+[33mcommit 3d92c8a6853d3b1cd52fe795f1d274a34552f9be[m
+Author: Rodrigo <rodrigogcespedes@gmail.com>
+Date:   Sun Nov 8 17:09:17 2020 -0300
+
+    genericos y lombok
+
+[33mcommit a2a37f7f0f263d7db4c0c3c4788355289fa22048[m[33m ([m[1;31morigin/tpa[m[33m)[m
+Author: raul.24672@gmail.com <raul.24672@gmail.com>
+Date:   Thu Nov 5 17:51:58 2020 -0300
+
+    micronaout & Generics
+
+[33mcommit 3a1ca03381f7d507b2dc86b85a9d52b25e35d4f1[m
+Author: Micaela Teot <micateot18@gmail.com>
+Date:   Wed Nov 4 20:35:50 2020 -0300
+
+    Arreglado error en el path de AutorControllerTest
+
+[33mcommit ea48fa0b49cc154596b67b42642a60aed05804e9[m
+Author: Micaela Teot <micateot18@gmail.com>
+Date:   Wed Nov 4 20:31:28 2020 -0300
+
+    Agregado test de AutorController
+
+[33mcommit 189e6a311ac622e70b877c9b88f6789df96f76ea[m
+Author: Martin Quiroga <martin.quiroga.05@gmail.com>
+Date:   Wed Nov 4 20:26:50 2020 -0300
+
+    Agregado Test de LocalidadController
+
+[33mcommit 30d69f67c11f39899d21d3e2453b5d52bafac7d4[m
+Merge: 9c7d113 cc3e2b8
+Author: Diego M <diego.manu20@gmail.com>
+Date:   Wed Nov 4 17:20:33 2020 -0300
+
+    Merge remote-tracking branch 'refs/remotes/origin/develop' into develop
+
+[33mcommit 9c7d1130b1909e3a9915f800abfee7b29fa5d5dc[m
+Author: Diego M <diego.manu20@gmail.com>
+Date:   Wed Nov 4 17:18:22 2020 -0300
+
+    Eliminado cascadetype.all de clase
+    domicilio en atributo localidad
+    ya que creaba nuevas localidades.
+
+[33mcommit cc3e2b87bd20ed076571fadf3e759888ba456ab9[m
+Author: Rodrigo Sobisch <rolox05@gmail.com>
+Date:   Wed Nov 4 15:09:34 2020 -0300
+
+    ignorar libros por ahora
+
+[33mcommit 1c181a2646db0045ca6673661886d79730bc5f43[m
+Author: Diego M <diego.manu20@gmail.com>
+Date:   Wed Nov 4 12:30:05 2020 -0300
+
+    Arreglado error en clase domicilio,
+    faltaba cascadeo
+
+[33mcommit 6d93193173d7b19264beccf0eaaad8b6d4d82721[m
+Author: Diego M <diego.manu20@gmail.com>
+Date:   Wed Nov 4 12:19:13 2020 -0300
+
+    Creado service, controller y repository de Libro
+
+[33mcommit 9816547c4228d3d84f347c1b55a6b98698e832e1[m
+Author: Rodrigo Sobisch <rolox05@gmail.com>
+Date:   Mon Nov 2 19:53:20 2020 -0300
+
+    Agregado un test unitario de crear persona
+
+[33mcommit 11689400c7a5e4f0adcc4b665af5620911431ff5[m
+Author: Rodrigo Sobisch <rolox05@gmail.com>
+Date:   Mon Nov 2 19:26:25 2020 -0300
+
+    Agregar find by ID a las 3 entidades
+
+[33mcommit cf7fd07cf8e5fa8588c4befeffde996246599c16[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Rodrigo Sobisch <rolox05@gmail.com>
+Date:   Mon Nov 2 18:44:45 2020 -0300
+
+    Agregado repositorio, controlador y servicio de autor
+
+[33mcommit ebd0ed2a029e586fbcba854273d37d714ff55016[m
+Author: Rodrigo Sobisch <rolox05@gmail.com>
+Date:   Mon Nov 2 18:44:28 2020 -0300
+
+    Mas getters que faltaba portar
+
+[33mcommit bd4df17771a3befa0602ed692d78913bdc4f0347[m
+Author: Rodrigo Sobisch <rolox05@gmail.com>
+Date:   Mon Nov 2 18:36:24 2020 -0300
+
+    Agregar controladores repositorios y servicios para localidad
+
+[33mcommit 1c74025c044e8af8665d29ef9372e0cf29c30445[m
+Author: Rodrigo Sobisch <rolox05@gmail.com>
+Date:   Mon Nov 2 18:36:05 2020 -0300
+
+    Agregar getters y setters a todas las entidades
+
+[33mcommit e3a88887620baf44265cec00b40bba28d63c2b6f[m
+Author: Rodrigo Sobisch <rolox05@gmail.com>
+Date:   Mon Nov 2 16:07:27 2020 -0300
+
+    Commit inicial por diego
+
+[33mcommit acf880fd0d4d17f19f15f17b85367b886ed1e155[m
+Author: Rodrigo Sobisch <rolox05@gmail.com>
+Date:   Mon Nov 2 15:44:00 2020 -0300
+
+    borrar primer solución
+
+[33mcommit 1755f4a10a829353d7b8f64dff85b4681af87ac4[m
+Author: Diego M <diego.manu20@gmail.com>
+Date:   Thu Oct 29 21:33:59 2020 -0300
+
+    Primer commit, agregadas todas las clases

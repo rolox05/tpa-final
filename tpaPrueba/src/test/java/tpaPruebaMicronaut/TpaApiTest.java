@@ -1,4 +1,4 @@
-package tpaPrueba;
+package tpaPruebaMicronaut;
 
 import javax.inject.Inject;
 
