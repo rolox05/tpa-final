@@ -135,7 +135,12 @@
       <scope>runtime</scope>
     </dependency>
 
-
+    <dependency>
+      <groupId>io.micronaut</groupId>
+      <artifactId>micronaut-aop</artifactId>
+      <scope>compile</scope>
+      <version>&#36;{micronaut.version}</version>
+    </dependency>
 
   </dependencies>
 

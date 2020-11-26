@@ -10,10 +10,12 @@ import io.micronaut.http.annotation.Post;
 import io.micronaut.http.annotation.Put;
 import io.micronaut.scheduling.TaskExecutors;
 import io.micronaut.scheduling.annotation.ExecuteOn;
+import tpaPrueba.aspects.Registrar;
 import tpaPrueba.ent.Base;
 import tpaPrueba.serv.BaseServiceImpl;
 
 @ExecuteOn(TaskExecutors.IO)
+@Registrar
 public abstract class BaseControllerImpl<E extends Base, S extends BaseServiceImpl<E, Long>> implements BaseController<E, Long> {
 
     protected S servicio;
